@@ -1,3 +1,18 @@
 @import "tailwindcss";
 @import "aos/dist/aos.css";
 @import "react-multi-carousel/lib/styles.css";
+
+
+/* Dark gradient background base */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  background: #000018;
+}

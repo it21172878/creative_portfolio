@@ -43,7 +43,7 @@ const Nav = ({ openNav }: Props) => {
             <Link
               key={link.id}
               href={link.url}
-              className=" text-base  hover:text-cyan-300 text-white font-medium transition-all duration-200"
+              className=" text-base  hover:text-cyan-300 text-white font-medium transition-all duration-200 font-[family-name:var(--font-space-mono)]"
             >
               {link.label}
             </Link>
