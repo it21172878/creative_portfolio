@@ -2,7 +2,6 @@
 @import "aos/dist/aos.css";
 @import "react-multi-carousel/lib/styles.css";
 
-
 /* Dark gradient background base */
 html,
 body {
@@ -15,4 +14,9 @@ body {
 body {
   position: relative;
   background: #000018;
+}
+
+/* Space Mono font utility */
+.font-space-mono {
+  font-family: "Space Mono", monospace;
 }

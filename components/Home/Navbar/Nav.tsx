@@ -38,12 +38,12 @@ const Nav = ({ openNav }: Props) => {
           </h1>
         </div>
         {/* NAV LINKS */}
-        <div className=" hidden lg:flex items-center space-x-10">
+        <div className="hidden lg:flex items-center space-x-10">
           {NavLinks.map((link) => (
             <Link
               key={link.id}
               href={link.url}
-              className=" text-base  hover:text-cyan-300 text-white font-medium transition-all duration-200 font-[family-name:var(--font-space-mono)]"
+              className="text-base text-white font-medium font-space-mono hover:text-cyan-300 transition-all duration-200"
             >
               {link.label}
             </Link>

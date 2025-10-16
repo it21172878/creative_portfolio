@@ -24,9 +24,9 @@ const MobileNav = ({ showNav, closeNav }: Props) => {
             <Link
               key={link.id}
               href={link.url}
-              className=" text-base  hover:text-cyan-300 text-white font-medium transition-all duration-200 font-[family-name:var(--font-space-mono)]"
+              className="text-base text-white font-medium font-space-mono hover:text-cyan-300 transition-all duration-200"
             >
-              <p className=" text-white w-fit text-xl ml-12 border-b-[1.5px] pb-1 border-white sm:text-[30px]">
+              <p className="text-white w-fit text-xl ml-12 border-b-[1.5px] pb-1 border-white sm:text-[30px] font-space-mono">
                 {link.label}
               </p>
             </Link>
