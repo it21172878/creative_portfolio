@@ -7,13 +7,12 @@ import Projects from "./Projects/Projects";
 import Skills from "./Skills/Skills";
 import ClientReview from "./ClientReview/ClientReview";
 import Contact from "./Contact/Contact";
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
 
 const Home = () => {
   useEffect(() => {
     const initAOS = async () => {
-      await import("aos");
+      // Dynamically import AOS only on the client to avoid SSR issues
+      const AOS = (await import("aos")).default;
       AOS.init({
         duration: 1000,
         easing: "ease",

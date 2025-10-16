@@ -8,7 +8,6 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     setMounted(true);
-
     const toggleVisibility = () => {
       if (window.scrollY > 300) {
         setIsVisible(true);
@@ -16,18 +15,26 @@ const ScrollToTop = () => {
         setIsVisible(false);
       }
     };
-
     window.addEventListener("scroll", toggleVisibility);
+    // Initialize once on mount
+    toggleVisibility();
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
+  //   SCROLL TO TOP FUNCTIONALITY TO BE ADDED
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
-  if (!mounted) return null; // Don't render anything on the server
+  if (!mounted) return null;
 
   return (
     <div className="fixed bottom-4 animate-bounce right-4">
       {isVisible && (
         <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={scrollToTop}
           title="Scroll To Top"
           className="p-3 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition cursor-pointer"
         >
